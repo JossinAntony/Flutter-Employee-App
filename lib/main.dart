@@ -8,6 +8,20 @@ void main()
 }
 
 class MyApp extends StatelessWidget {
+
+  TextEditingController eNameController = TextEditingController();
+  TextEditingController eDesigController = TextEditingController();
+  TextEditingController eCompanyController = TextEditingController();
+
+  TextEditingController eSalaryController = TextEditingController();
+  TextEditingController eMailController = TextEditingController();
+  TextEditingController eMobileController = TextEditingController();
+
+  TextEditingController ePlaceController = TextEditingController();
+  TextEditingController unameController = TextEditingController();
+  TextEditingController pwdController = TextEditingController();
+
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -24,6 +38,7 @@ class MyApp extends StatelessWidget {
                     SizedBox(height: 20.0,),
                     //Text("Employee Name:"),
                     TextField(
+                      controller: eNameController,
                       decoration: InputDecoration(
                         border: OutlineInputBorder(),
                         hintText: "Enter the Employee name.",
@@ -33,6 +48,7 @@ class MyApp extends StatelessWidget {
                     SizedBox(height: 20.0),
                     //Text("Designation:"),
                     TextField(
+                      controller: eDesigController,
                       decoration: InputDecoration(
                         border: OutlineInputBorder(),
                         hintText: 'Enter Designation',
@@ -42,6 +58,7 @@ class MyApp extends StatelessWidget {
                     SizedBox(height: 20.0),
                     //Text("Company Name:"),
                     TextField(
+                      controller: eCompanyController,
                         decoration: InputDecoration(
                           border: OutlineInputBorder(),
                           hintText: 'Enter Company Name',
@@ -51,6 +68,7 @@ class MyApp extends StatelessWidget {
                     SizedBox(height: 20.0),
                     //Text("Salary:"),
                     TextField(
+                      controller: eSalaryController,
                         decoration: InputDecoration(
                           border: OutlineInputBorder(),
                           hintText: 'Enter Salary',
@@ -60,6 +78,7 @@ class MyApp extends StatelessWidget {
                     SizedBox(height: 20.0),
                     //Text("EmailId:"),
                     TextField(
+                      controller: eMailController,
                         decoration: InputDecoration(
                           border: OutlineInputBorder(),
                           hintText: 'Enter Email Id',
@@ -69,6 +88,7 @@ class MyApp extends StatelessWidget {
                     SizedBox(height: 20.0),
                     //Text("Mobile no:"),
                     TextField(
+                      controller: eMobileController,
                         decoration: InputDecoration(
                           border: OutlineInputBorder(),
                           hintText: 'Enter mobile no:',
@@ -78,6 +98,7 @@ class MyApp extends StatelessWidget {
                     SizedBox(height: 20.0),
                     //Text("Place:"),
                     TextField(
+                      controller: ePlaceController,
                         decoration: InputDecoration(
                           border: OutlineInputBorder(),
                           hintText: 'Enter Place',
@@ -87,15 +108,17 @@ class MyApp extends StatelessWidget {
                     SizedBox(height: 20.0),
                     //Text("Username:"),
                     TextField(
+                      controller: unameController,
                         decoration: InputDecoration(
                           border: OutlineInputBorder(),
-                          hintText: 'Enter Designation',
+                          hintText: 'Enter Username',
                           prefixIcon: Icon(Icons.account_circle),
                         )
                     ),
                     SizedBox(height: 20.0),
                     //Text("Password:"),
                     TextField(
+                      controller: pwdController,
                         decoration: InputDecoration(
                           border: OutlineInputBorder(),
                           hintText: 'Enter Password',
@@ -103,7 +126,31 @@ class MyApp extends StatelessWidget {
                         )
                     ),
                     RaisedButton(
-                      onPressed: (){},
+                      onPressed: (){
+                        var ename = eNameController.text;
+                        var edesig = eDesigController.text;
+                        var eCompany = eCompanyController.text;
+
+                        var eSalary = eSalaryController.text;
+                        var eMail = eMailController.text;
+                        var mob = eMobileController.text;
+
+                        var place = ePlaceController.text;
+                        var uname = unameController.text;
+                        var pwd = pwdController.text;
+
+                        print(ename);
+                        print(edesig);
+                        print(eCompany);
+
+                        print(eSalary);
+                        print(eMail);
+                        print(mob);
+
+                        print(place);
+                        print(uname);
+                        print(pwd);
+                      },
                       child: Text("Register"),
                       color: Colors.blue,
                     ),
