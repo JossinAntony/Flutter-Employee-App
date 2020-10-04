@@ -1,3 +1,4 @@
+import 'package:employee_app_1/datamodel/employeemodel.dart';
 import 'package:flutter/material.dart';
 
 class MyApp extends StatelessWidget {
@@ -143,6 +144,17 @@ class MyApp extends StatelessWidget {
                         print(place);
                         print(uname);
                         print(pwd);
+
+                        var employee = EmployeeModel(employeeName: eNameController.text,
+                        employeeDesignation: eDesigController.text,
+                        companyName: eCompanyController.text,
+                        salary: eSalaryController.text,
+                            emailId: eMailController.text,
+                          mobileNo: eMobileController.text,
+                          place: ePlaceController.text,
+                          userName: unameController.text,
+                          password: pwdController.text
+                        );
                       },
                       child: Text("Register"),
                       color: Colors.blue,
